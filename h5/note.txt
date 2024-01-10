@@ -1,1 +1,4 @@
 s~!@#$%^&*()_+{}:"?><使得～！@#¥%……&*（）——+「｜“：？》《
+
+redis 轮子
+https://github.com/binghe001/spring-redis
