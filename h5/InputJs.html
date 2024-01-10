@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h1>input js test</h1>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Input Validation</title>
+    </head>
+
+    <body>
+
+        <input type="text" id="name" placeholder="input area" onblur="validInput()" style="width: 500px;height: 60px;">
+
+
+        <script>
+            function validInput() {
+                const nameElement = document.getElementById('name');
+                const name = nameElement.value.trim();
+
+                // 定义匹配中英文字符、数字或中英文标点符号的正则表达式
+                // var pattern = /^[~!@#\$%^&*()_+{}:"?><使得～！@#¥%……&*（）——+「｜“：？》《\u4E00-\u9FA5a-zA-Z0-9]+$/;
+                var pattern = /^[\u4E00-\u9FA5a-zA-Z0-9~!@#\$%^&*()_+{}:"?><～！@#¥%……&*（）——+「｜“：？》《]+$/;
+
+                // 验证输入是否符合要求
+                if (pattern.test(name)) {
+                    alert("输入合法");
+                    setTimeout(() => {
+                        document.body.focus();
+                    }, 100);
+                } else {
+                    alert("输入不合法");
+                }
+            }
+        </script>
+    </body>
+</html>
