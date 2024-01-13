@@ -14,8 +14,16 @@
 # 元素
 ## html 文档由 html 元素定义。大多数 html 元素可拥有 属性，属性是 html 元素提供的附加信息。
 
-## css 用于渲染 html 元素标签的样式
+## css 用于渲染 html 元素标签的样式；如何使用CSS
+CSS 是 HTML4 开始使用的，是为了更好渲染 HTML 元素而引入的。 CSS 可以通过以下方式添加到 HTML 中：
+    内联样式- 在 HTML 元素 中使用 “style” 属性
+    内部样式表 - 在HTML 文档头部 <head> 区域 使用 <style> 元素 来包含CSS
+    外部引用 - 使用外部 CSS 文件
 
+
+
+# HTML脚本
+JavaScript使HTML页面具有更强的动态和交互性
 
 
 
