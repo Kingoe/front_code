@@ -20,6 +20,42 @@
 
     <button type="button" onclick="alert('欢迎')">点我</button>
 
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
+    <input type="text" id="title" onclick="valid()" />
+
+    <div id="div1">
+
+    </div>
+
+    <script>
+
+        function valid() {
+
+            var title = document.getElementById('title').value;
+
+            var http = new XMLHttpRequest();
+
+            http.open('get', '/get?title=' + title, true);
+            http.setRequestHeader('Content-type', 'application/json');
+
+            http.onreadystatechange = function() {
+                if(http.readyState == 4 && http.status == 200) {
+                    document.getElementById('div1').innerHTML = http.responseText;
+                }
+            }
+
+            http.send();
+
+
+
+        }
+
+    </script>
+
 </body>
 
 </html>
